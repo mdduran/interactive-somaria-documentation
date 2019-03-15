@@ -1,28 +1,66 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <b-container fluid id="app" class="column">
+    <b-navbar type="light" variant="light" class="flex-none">
+      <b-navbar-brand tag="h1" class="title"> Interactive Somaria Documentation </b-navbar-brand>
+    </b-navbar>
+    <b-row class="flex-1">
+      <b-col cols=3 class="left-panel">
+        <Sidebar/>
+      </b-col>
+      <b-col class="right-panel">
+        <b-card>
+          <b-row>
+            <b-col>
+              <PropertyPanel/>
+            </b-col>
+            <b-col>
+              <PreviewPanel/>
+            </b-col>
+          </b-row>
+        </b-card>
+        <DocumentationPanel/>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Sidebar from '@/components/Sidebar'
+import PreviewPanel from '@/components/PreviewPanel'
+import PropertyPanel from '@/components/PropertyPanel'
+import DocumentationPanel from '@/components/DocumentationPanel'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Sidebar,
+    PreviewPanel,
+    PropertyPanel,
+    DocumentationPanel
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+html, body, #app {
+  height: 100%;
+}
+.title {
+  font-weight: bold;
+}
+.row, .column {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.flex-none {
+  flex: none;
+}
+.flex-1 {
+  flex: 1;
+}
+.left-panel, .right-panel {
+  overflow-y: auto;
 }
 </style>

@@ -1,10 +1,12 @@
 <template>
-	<h1> Preview Panel </h1>
+	<div class="preview-panel">
+		<h2> Preview panel </h2>
+	</div>
 </template>
 
 <script>
 export default {
-	name: previewPanel
+	name: 'PreviewPanel'
 }
 </script>
 
