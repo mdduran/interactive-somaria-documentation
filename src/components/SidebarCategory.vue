@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h3 class="category-title"> {{this.title}} </h3>
+		<h4 class="category-title"> {{this.title}} </h4>
 		<ul>
 			<li class="block-type" v-for="entry in types" v-bind:key="entry[0]" @click="setBlockType(entry[1])"> {{entry[0]}} </li>
 		</ul>

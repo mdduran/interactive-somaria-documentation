@@ -23,6 +23,10 @@ export default {
                 componentName = "Dropdown";
             }
             
+            if( componentName === "Angle" || componentName === "Point" ) {
+                componentName = "Vector";
+            }
+            
             return () => import(`@/components/property-panel/${componentName}`)
         },
     },

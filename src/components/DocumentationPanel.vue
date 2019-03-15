@@ -1,5 +1,5 @@
 <template>
-	<h1> {{this.$store.getters.getCurrentBlockType.label}} </h1>
+	<p></p>
 </template>
 
 <script>

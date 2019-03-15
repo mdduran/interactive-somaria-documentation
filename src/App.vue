@@ -7,8 +7,9 @@
       <b-col cols=3 class="left-panel">
         <Sidebar/>
       </b-col>
-      <b-col class="right-panel">
-        <b-card>
+      <b-col class="right-panel py-2">
+        <h2>{{this.$store.getters.getCurrentBlockType.label}}</h2>
+        <b-card class="my-2" v-if="this.$store.getters.getCurrentBlockType.label">
           <b-row>
             <b-col>
               <PropertyPanel/>
