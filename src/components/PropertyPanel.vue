@@ -1,10 +1,23 @@
 <template>
-	<h1> PropertyPanel </h1>
+	<b-container fluid>
+		<b-row v-for="blockInput in this.$store.getters.getCurrentBlockType.inputs" :key="blockInput.name">
+			<b-col cols=3>
+				<label> {{blockInput.name}} </label>
+			</b-col>
+			<b-col>
+				<PropertyPanelInput :blockInput="blockInput"/>
+			</b-col>
+		</b-row>
+	</b-container>
 </template>
 
 <script>
+import PropertyPanelInput from '@/components/PropertyPanelInput'
 export default {
-	name: 'PropertyPanel'
+	name: 'PropertyPanel',
+	components: {
+		PropertyPanelInput
+	}
 }
 </script>
 
