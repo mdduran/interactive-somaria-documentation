@@ -3,7 +3,7 @@
     <b-navbar type="light" variant="light" class="flex-none">
       <b-navbar-brand tag="h1" class="title"> Interactive Somaria Documentation </b-navbar-brand>
     </b-navbar>
-    <b-row class="flex-1">
+    <b-row class="main-panel row flex-1">
       <b-col cols=3 class="left-panel">
         <Sidebar/>
       </b-col>
@@ -42,8 +42,9 @@ export default {
 </script>
 
 <style>
-html, body, #app {
+html, body, #app, .main-panel {
   height: 100%;
+  overflow: hidden;
 }
 .title {
   font-weight: bold;
@@ -62,5 +63,6 @@ html, body, #app {
 }
 .left-panel, .right-panel {
   overflow-y: auto;
+  max-height: 100%;
 }
 </style>

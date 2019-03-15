@@ -1,4 +1,5 @@
-export const blockDefinitionsByCategory = new Map();
+const blockDefinitionsByCategory = new Map();
+export default blockDefinitionsByCategory;
 
 function defineBlock( definition ) {
 	let category = blockDefinitionsByCategory.get( definition.category );
@@ -105,7 +106,7 @@ defineBlock( {
 		{ name: "Rotation", type: "Angle" },
 		{ name: "Texture", type: "Texture" } ],
 	outputs: []
-} );\
+} );
 defineBlock( {
 	name: "Line",
 	label: "Line",
