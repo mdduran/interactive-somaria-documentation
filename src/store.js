@@ -10,6 +10,9 @@ export default new Vuex.Store({
 	mutations: {
 		setCurrentBlockType: (state, blockType) => {
 			state.currentBlockType = blockType;
+		},
+		setBlockInputValue: (state, { index, value }) => {
+			state.currentBlockType.inputs[index].value = value;
 		}
 	},
 	getters: {
