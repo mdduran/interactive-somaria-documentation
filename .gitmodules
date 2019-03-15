@@ -1,0 +1,3 @@
+[submodule "somaria"]
+	path = somaria
+	url = https://github.com/pegasystems/somaria
