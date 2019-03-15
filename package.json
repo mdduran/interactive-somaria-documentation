@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "cd node_modules/somaria && npm run build && cd ../../ && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
@@ -11,7 +11,8 @@
     "bootstrap": "^4.3.1",
     "bootstrap-vue": "^2.0.0-rc.14",
     "vue": "^2.6.6",
-    "vuex": "^3.1.0"
+    "vuex": "^3.1.0",
+    "somaria": "github:pegasystems/somaria"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.5.0",

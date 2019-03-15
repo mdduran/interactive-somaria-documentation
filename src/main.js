@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import Vuex from 'vuex'
 import store from './store'
+window.THREE = require('../node_modules/somaria/node_modules/three/build/three');
+window.somaria = require('../node_modules/somaria/build/Visualization');
 
 Vue.config.productionTip = false
 
