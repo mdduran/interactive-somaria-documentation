@@ -15,7 +15,7 @@
               <PropertyPanel/>
             </b-col>
             <b-col>
-              <PreviewPanel/>
+              <PreviewPanelDisplay :blockType="this.$store.getters.getCurrentBlockType"/>
             </b-col>
           </b-row>
         </b-card>
@@ -27,7 +27,7 @@
 
 <script>
 import Sidebar from '@/components/Sidebar'
-import PreviewPanel from '@/components/PreviewPanel'
+import PreviewPanelDisplay from '@/components/PreviewPanelDisplay'
 import PropertyPanel from '@/components/PropertyPanel'
 import DocumentationPanel from '@/components/DocumentationPanel'
 
@@ -35,7 +35,7 @@ export default {
   name: 'app',
   components: {
     Sidebar,
-    PreviewPanel,
+    PreviewPanelDisplay,
     PropertyPanel,
     DocumentationPanel
   }

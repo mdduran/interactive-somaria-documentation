@@ -1,12 +1,21 @@
 <template>
 	<div class="preview-panel">
-		<h2> Preview panel </h2>
+		<PreviewPanelDisplay :blockType="blockType"/>
 	</div>
 </template>
 
 <script>
+import PreviewPanelDisplay from "./PreviewPanelDisplay";
 export default {
-	name: 'PreviewPanel'
+	name: 'PreviewPanel',
+	components: {
+		PreviewPanelDisplay
+	},
+	computed: {
+		blockType() {
+			return this.$store.getters.getCurrentBlockType;
+		}
+	}
 }
 </script>
 
