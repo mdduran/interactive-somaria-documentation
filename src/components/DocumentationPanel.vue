@@ -1,5 +1,5 @@
 <template>
-	<h1> Documentation Panel </h1>
+	<h1> {{this.$store.getters.getCurrentBlockType.label}} </h1>
 </template>
 
 <script>
