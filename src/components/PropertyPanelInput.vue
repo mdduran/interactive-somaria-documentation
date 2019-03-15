@@ -1,11 +1,11 @@
 <template>
-    <component :is="component" :blockInput="blockInput" v-if="component" />
+    <component :is="component" :blockInput="blockInput" :blockInputIndex="blockInputIndex" v-if="component" />
 </template>
 
 <script>
 export default {
     name: 'PropertyPanelInput',
-    props: ['blockInput'],
+    props: ['blockInput', 'blockInputIndex'],
     data() {
         return {
             component: null,
@@ -16,7 +16,14 @@ export default {
             if (!this.blockInput) {
                 return null
             }
-            return () => import(`@/components/property-panel/${this.blockInput.type}`)
+            
+            let componentName = this.blockInput.type;
+            
+            if( componentName === "Text" && this.blockInput.valid ) {
+                componentName = "Dropdown";
+            }
+            
+            return () => import(`@/components/property-panel/${componentName}`)
         },
     },
     mounted() {

@@ -1,10 +1,10 @@
 <template>
-	<b-form-input :type="'text'" @change="inputChange"/>
+	<b-form-select :options="options" @change="inputChange"/>
 </template>
 
 <script>
 export default {
-	name: "Text",
+	name: "Dropdown",
 	props: ['blockInput', 'blockInputIndex'],
 	methods: {
 		inputChange(value) {
@@ -12,6 +12,11 @@ export default {
 				index: this.blockInputIndex,
 				value
 			});
+		}
+	},
+	computed: {
+		options() {
+			return this.blockInput.valid.map( ( { name: text, value } ) => ( { text, value } ) );
 		}
 	}
 }
