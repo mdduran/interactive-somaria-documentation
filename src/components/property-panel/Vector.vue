@@ -14,10 +14,11 @@ export default {
 	name: "Text",
 	props: ['blockInput', 'blockInputIndex'],
 	data() {
+		const defaultValue = this.$store.getters.getCurrentBlockClass.getDefaultInputValues( {} )[ this.blockInputIndex ];
 		return {
-			vectorX,
-			vectorY,
-			vectorZ
+			vectorX: defaultValue.x,
+			vectorY: defaultValue.y,
+			vectorZ: defaultValue.z
 		};
 	},
 	methods: {

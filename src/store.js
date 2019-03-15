@@ -18,6 +18,9 @@ export default new Vuex.Store({
 	getters: {
 		getCurrentBlockType: state => {
 			return state.currentBlockType;
+		},
+		getCurrentBlockClass: state => {
+			return window.somaria.BlockTypes.get( state.currentBlockType.name );
 		}
 	}
 });
